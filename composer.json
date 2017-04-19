@@ -85,6 +85,10 @@
     {
       "type": "git",
       "url": "git@gitlab.com:redandblue/WP-PHP-Helpers.git"
+    },
+    {
+      "type": "git",
+      "url": "git@github.com:redandbluefi/theme-skeleton.git"
     }
   ],
   "require": {
@@ -119,7 +123,8 @@
     "wpackagist-plugin/post-expirator": "^2.1",
     "wpackagist-plugin/duplicate-post": "^3.0",
     "wpackagist-plugin/query-monitor": "^2.13",
-    "k1sul1/sensible-content-output": "dev-master"
+    "k1sul1/sensible-content-output": "dev-master",
+    "redandblue/theme-skeleton": "dev-scratch"
   },
   "extra": {
     "installer-paths": {
