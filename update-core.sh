@@ -11,6 +11,7 @@ if [[ $MYPWD != *"config"* ]]; then
   yes | cp -f install.js config/install.js
   yes | cp -f yarn.lock config/yarn.lock
   yes | cp -f README.md config/README.md
+  yes | cp -f Vagrantfile config/Vagrantfile
 
   rsync -rv --ignore-times --exclude=*.warning ./config/  tmp/wordpress
   rsync --exclude=.git --exclude=composer.lock --exclude=gulpfile.js -rv tmp/wordpress/ .

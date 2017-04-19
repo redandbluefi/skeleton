@@ -193,9 +193,15 @@ Vagrant.configure('2') do |config|
       run_remote "wp-restart-nginx &> /dev/null"
 
       # Run 'vagrant up' customizer script if it exists
+      # if File.exist?(File.join(DIR, 'vagrant-up-customizer.sh'))
+        # notice 'Found vagrant-up-customizer.sh and running it ...'
+        # system File.join(DIR, 'vagrant-up-customizer.sh')
+      # end
+
+      # Run 'vagrant up' customizer script if it exists
       if File.exist?(File.join(DIR, 'vagrant-up-customizer.sh'))
-        notice 'Found vagrant-up-customizer.sh and running it ...'
-        system File.join(DIR, 'vagrant-up-customizer.sh')
+        notice 'Running vagrant-up-customizer.sh ...'
+        run_remote '/data/wordpress/vagrant-up-customizer.sh'
       end
 
       puts "\n"
@@ -299,6 +305,18 @@ def confirm(question,default=true)
     default = "yes"
   else
     default = "no"
+  end
+
+  # Illusion of choice. Don't prompt for these.
+  puts case question
+  when "Pull database from production?"
+    return false
+  when "There's no git repository. Should we create one?"
+    return true
+  when "Activate git hooks in scripts/hooks?"
+    return true
+  when "Trust the generated ssl-certificate in OS-X keychain?"
+    return true
   end
 
   confirm = nil
