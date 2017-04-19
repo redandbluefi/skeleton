@@ -108,7 +108,10 @@ function setupRepository() {
     // console.log(chalk.yellow(addUpstream));
     // }
 
-    const upstream = package.repository.url.replace('git+ssh://', '');
+    const upstream = package.repository.url
+      .replace('git+ssh://', '')
+      .replace('github.com/', 'github.com:')
+      .concat('.git');
     cp.execSync(`git remote add upstream ${upstream}`);
 
     const changeOrigin = Git.Remote.setUrl(repo, 'origin', url);
