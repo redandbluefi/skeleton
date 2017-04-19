@@ -28,8 +28,6 @@ if [ "$?" == "0" ]; then
   echo "Skipping setup, existing installation."
 else
   PASSWORD=$(openssl rand -base64 32 | head -c32)
-  echo "Your username is redandblue.admin"
-  echo "Your password is $PASSWORD"
 
   sudo -u vagrant -i -- wp user create "redandblue.admin" "dev@redandblue.fi" --role="administrator" \
     --display_name="Administrator" --user_pass="$PASSWORD"
@@ -43,3 +41,6 @@ else
 fi
 
 echo "If this looks like it failed, log into the machine (vagrant ssh) and run the script with '/data/wordpress/vagrant-up-customizer.sh'"
+echo "Your username is redandblue.admin"
+echo "Your password is $PASSWORD"
+echo "Save these credentials to LastPass now."
