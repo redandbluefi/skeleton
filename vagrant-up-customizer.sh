@@ -1,3 +1,4 @@
+su vagrant
 # Automatic database backups
 cat>./local-database-backup <<'NOW'
 #!/bin/bash
