@@ -86,6 +86,8 @@ function createNewProject() {
   generateConfig();
   setupRepository();
 
+  console.log(chalk.green('All done! Proceed to running Vagrant'));
+
   // cloneWordPressBase()
   // .then(result => {
   // setupRepository();
@@ -96,7 +98,8 @@ function setupRepository() {
   Git.Repository.open(__dirname).then(repo => {
     const url = 'git@gitlab.com:'.concat(typeof program.repository === 'string'
       ? program.repository
-      : prompt('Repository path, example: redandblue/skeleton\nMake it if you don\'t have it yet : '));
+      : console.log('Repository path, example: redandblue/skeleton') ||
+        prompt('Make it if you don\'t have it yet: '));
 
 
     // Why is this so hard?
@@ -106,7 +109,7 @@ function setupRepository() {
     // }
 
     const upstream = package.repository.url.replace('git+ssh://', '');
-    cp.execSync(`cd tmp; git remote add upstream ${upstream}`);
+    cp.execSync(`git remote add upstream ${upstream}`);
 
     const changeOrigin = Git.Remote.setUrl(repo, 'origin', url);
     if (changeOrigin !== 0) {
