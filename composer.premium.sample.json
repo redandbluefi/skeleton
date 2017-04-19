@@ -1,54 +1,4 @@
 {
-  "name": "redandblue/skeleton",
-  "type": "project",
-  "license": "GPL-3.0",
-  "description": "",
-  "homepage": "https://redandblue.fi/",
-  "authors": [
-    {
-      "name": "Antti Kuosmanen",
-      "email": "antti@seravo.fi",
-      "homepage": "https://github.com/anttiviljami"
-    },
-    {
-      "name": "Otto Kekäläinen",
-      "email": "otto@seravo.fi",
-      "homepage": "https://github.com/ottok"
-    },
-    {
-      "name": "Onni Hakala",
-      "email": "onni@seravo.fi",
-      "homepage": "https://github.com/onnimonni"
-    },
-    {
-      "name": "Christian Nikkanen",
-      "email": "christian@redandblue.fi",
-      "homepage": "https://github.com/k1sul1"
-    }
-  ],
-  "keywords": [
-    "wordpress",
-    "composer",
-    "wp",
-    "wp-palvelu",
-    "seravo"
-  ],
-  "config": {
-    "preferred-install": "dist"
-  },
-  "autoload": {
-    "psr-0": {
-      "WordPress\\Installer": "scripts"
-    }
-  },
-  "scripts": {
-    "post-install-cmd": [
-      "WordPress\\Installer::symlinkWPContent"
-    ],
-    "post-update-cmd": [
-      "WordPress\\Installer::symlinkWPContent"
-    ]
-  },
   "repositories": [
     {
       "type": "composer",
@@ -57,6 +7,18 @@
     {
       "type": "composer",
       "url": "https://wp-languages.github.io"
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "advanced-custom-fields/advanced-custom-fields-pro",
+        "version": "5.4.9",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=[INSERT_KEY_HERE]"
+        }
+      }
     },
     {
       "type": "package",
@@ -85,6 +47,54 @@
     {
       "type": "git",
       "url": "git@gitlab.com:redandblue/WP-PHP-Helpers.git"
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "deliciousbrains/wp-migrate-db-pro",
+        "type": "wordpress-plugin",
+        "version": "1.7.0",
+        "dist": {
+          "type": "zip",
+          "url": "https://deliciousbrains.com/dl/wp-migrate-db-pro-latest.zip?licence_key=[INSERT_KEY_HERE]&site_url=development.local"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "deliciousbrains/wp-migrate-db-pro-media-files",
+        "type": "wordpress-plugin",
+        "version": "1.7.0",
+        "dist": {
+          "type": "zip",
+          "url": "https://deliciousbrains.com/dl/wp-migrate-db-pro-media-files-latest.zip?licence_key=[INSERT_KEY_HERE]&site_url=development.local"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "deliciousbrains/wp-migrate-db-pro-cli",
+        "type": "wordpress-plugin",
+        "version": "1.7",
+        "dist": {
+          "type": "zip",
+          "url": "https://deliciousbrains.com/dl/wp-migrate-db-pro-cli-latest.zip?licence_key=[INSERT_KEY_HERE]&site_url=development.local"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "deliciousbrains/wp-migrate-db-pro-multisite-tools",
+        "type": "wordpress-plugin",
+        "version": "1.7",
+        "dist": {
+          "type": "zip",
+          "url": "https://deliciousbrains.com/dl/wp-migrate-db-pro-multisite-tools-latest.zip?licence_key=[INSERT_KEY_HERE]&site_url=development.local"
+        }
+      }
     }
   ],
   "require": {
@@ -99,12 +109,16 @@
     "wpackagist-plugin/auto-post-thumbnail": "*",
     "redandbluefi/wp-native-dashboard": "*",
     "wpackagist-plugin/user-switching": "^1.0",
+    "advanced-custom-fields/advanced-custom-fields-pro": "*",
     "wpackagist-plugin/polylang": "*",
     "aucor/polylang-copy-content": "*",
     "aucor/dynamic-mo-loader": "*",
     "roots/soil": "3.7.0",
     "redandblue/wp-php-helpers": "*",
     "wpackagist-plugin/what-the-file": "^1.5",
+    "deliciousbrains/wp-migrate-db-pro": "*@dev",
+    "deliciousbrains/wp-migrate-db-pro-media-files": "*@dev",
+    "deliciousbrains/wp-migrate-db-pro-cli": "*@dev",
     "wpackagist-plugin/autodescription": "^2.6",
     "wpackagist-plugin/categories-images": "^2.5",
     "wpackagist-plugin/wp-libre-form": "^1.0",
@@ -120,30 +134,5 @@
     "wpackagist-plugin/duplicate-post": "^3.0",
     "wpackagist-plugin/query-monitor": "^2.13",
     "k1sul1/sensible-content-output": "dev-master"
-  },
-  "extra": {
-    "installer-paths": {
-      "htdocs/wp-content/plugins/{$name}/": [
-        "type:wordpress-plugin"
-      ],
-      "htdocs/wp-content/mu-plugins/{$name}/": [
-        "type:wordpress-muplugin"
-      ],
-      "htdocs/wp-content/themes/{$name}": [
-        "type:wordpress-theme"
-      ]
-    },
-    "dropin-paths": {
-      "htdocs/wp-content/languages/": [
-        "vendor:koodimonni-language"
-      ],
-      "htdocs/wp-content/languages/plugins/": [
-        "vendor:koodimonni-plugin-language"
-      ],
-      "htdocs/wp-content/languages/themes/": [
-        "vendor:koodimonni-theme-language"
-      ]
-    },
-    "wordpress-install-dir": "htdocs/wordpress"
   }
 }
