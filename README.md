@@ -1,7 +1,7 @@
 # redandblue skeleton
 This repository is the standard starting place for new WordPress projects.
 
-Clone it, create a new repository for your new project, and edit `composer.json` to include entries for premium plugins or remove those you will not need. You'll find most often used premium plugins in `composer.premium.sample.json`. Just add licence keys.
+Clone it, create a new repository for your new project, and edit `composer.json` to include entries for premium plugins or remove those you will not need. You'll find most often used premium plugins in `composer.premium.sample.json`. Just add licence keys. You'll also want to edit `package.json` and change the package name to something other than skeleton.
 
 After that simply run `yarn` to kickstart the complicated scripts and get going. The scripts may or may not ask you intimidating questions. Answer all of them and be honest.
 
