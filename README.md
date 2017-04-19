@@ -10,7 +10,12 @@ After the mist clears, absolutely nothing seems to have happened. It's time to k
 Assuming you've done something like this before (that means you've already configured Vagrant), running `vagrant up` should do it. Otherwise consult the documentation above. You will be told some things during the installation and you may be asked some questions. Don't read the questions, just blindly skip them by pressing <kbd>Enter</kbd>.
 
 # Requirements
-NodeJS: v6 or later
-PHP: 7.1 (not really, but strive for it)
-Composer: Installed on machine
-Yarn: Installed on machine
+- NodeJS: v6 or later
+- PHP: 7.1 (not really, but strive for it)
+- Composer: Installed on machine
+- Yarn: Installed on machine
+
+# Updating
+This leeches on seravo/wordpress. It's great, but this enables customizations. When Seravo releases updates, *make a backup* and run `./update-core.sh`. That will fetch the latest package (living on the edge) and merge our important files with it before merging the package back .
+
+I've tried to keep core file editing to a minimum, but some files such as Vagrantfile require manual attention if they change with the latest update.
