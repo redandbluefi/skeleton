@@ -19,8 +19,8 @@
     "url": "git+ssh://git@github.com/redandbluefi/skeleton"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Christian Nikkanen <hi@kisu.li>",
+  "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/redandbluefi/skeleton/issues"
   }
