@@ -1,4 +1,3 @@
-su vagrant
 # Automatic database backups
 cat>./local-database-backup <<'NOW'
 #!/bin/bash
@@ -18,12 +17,12 @@ chmod +x ./local-database-backup
 
 croncmd="/data/wordpress/local-database-backup"
 cronjob="*/15 * * * * $croncmd"
-( crontab -l | grep -v -F "$croncmd" ; echo "$cronjob" ) | crontab -
+( crontab -u vagrant -l | grep -v -F "$croncmd" ; echo "$cronjob" ) | crontab -u vagrant -
 
-/data/wordpress/local-database-backup # run it for good measure
+sudo -u vagrant -i -- /data/wordpress/local-database-backup # run it for good measure
 
 # Finally, edit the installation, if necessary
-wp user get "redandblue.admin" > /dev/null &> /dev/null
+sudo -u vagrant -i -- wp user get "redandblue.admin" > /dev/null &> /dev/null
 
 if [ "$?" == "0" ]; then
   echo "Skipping setup, existing installation."
@@ -32,13 +31,15 @@ else
   echo "Your username is redandblue.admin"
   echo "Your password is $PASSWORD"
 
-  wp user create "redandblue.admin" "dev@redandblue.fi" --role="administrator" \
+  sudo -u vagrant -i -- wp user create "redandblue.admin" "dev@redandblue.fi" --role="administrator" \
     --display_name="Administrator" --user_pass="$PASSWORD"
-  wp user delete 1 --yes
+  sudo -u vagrant -i -- wp user delete 1 --yes
 
   # Switch theme to ours (assuming there's only 1 theme)
-  wp theme activate $(wp theme list --field=name --format=csv | head -n 1)
+  sudo -u vagrant -i -- wp theme activate $(sudo -u vagrant -i -- wp theme list --field=name --format=csv | head -n 1)
 
   # Turn all plugins on (delete those that you won't use!)
-  wp plugin list --field=name --format=csv | xargs wp plugin activate --quiet
+  sudo -u vagrant -i -- wp plugin list --field=name --format=csv | xargs sudo -u vagrant -i -- wp plugin activate --quiet
 fi
+
+echo "If this looks like it failed, log into the machine (vagrant ssh) and run the script with '/data/wordpress/vagrant-up-customizer.sh'"
