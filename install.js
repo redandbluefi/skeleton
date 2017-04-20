@@ -98,8 +98,8 @@ function setupRepository() {
   Git.Repository.open(__dirname).then(repo => {
     const url = 'git@github.com:'.concat(typeof program.repository === 'string'
       ? program.repository
-      : console.log('Repository path, example: redandblue/skeleton') ||
-        prompt('Make it if you don\'t have it yet: '));
+      : console.log('Repository path, example: redandbluefi/skeleton') ||
+        prompt('Make it if you don\'t have it yet: ')).concat('.git');
 
 
     // Why is this so hard?
