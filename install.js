@@ -96,7 +96,7 @@ function createNewProject() {
 
 function setupRepository() {
   Git.Repository.open(__dirname).then(repo => {
-    const url = 'git@gitlab.com:'.concat(typeof program.repository === 'string'
+    const url = 'git@github.com:'.concat(typeof program.repository === 'string'
       ? program.repository
       : console.log('Repository path, example: redandblue/skeleton') ||
         prompt('Make it if you don\'t have it yet: '));
