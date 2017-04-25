@@ -84,7 +84,7 @@
     },
     {
       "type": "git",
-      "url": "git@gitlab.com:redandblue/WP-PHP-Helpers.git"
+      "url": "git@github.com:redandbluefi/wordpress-tools.git"
     },
     {
       "type": "git",
@@ -107,7 +107,7 @@
     "aucor/polylang-copy-content": "*",
     "aucor/dynamic-mo-loader": "*",
     "roots/soil": "3.7.0",
-    "redandblue/wp-php-helpers": "*",
+    "redandblue/wordpress-tools": "dev-master",
     "wpackagist-plugin/what-the-file": "^1.5",
     "wpackagist-plugin/autodescription": "^2.6",
     "wpackagist-plugin/categories-images": "^2.5",
@@ -124,7 +124,7 @@
     "wpackagist-plugin/duplicate-post": "^3.0",
     "wpackagist-plugin/query-monitor": "^2.13",
     "k1sul1/sensible-content-output": "dev-master",
-    "redandblue/theme-skeleton": "dev-scratch"
+    "redandblue/theme-skeleton": "dev-master"
   },
   "extra": {
     "installer-paths": {
