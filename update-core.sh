@@ -18,6 +18,10 @@ if [[ $MYPWD != *"config"* ]]; then
   rm -rf tmp
   rm -rf config
 
+  # Don't overwrite ours!
+  git checkout .gitignore
+  git checkout htdocs/wp-config.php
+
   # rm *.warning
   composer update
   exit
