@@ -2,6 +2,7 @@
   "name": "redandblue/skeleton",
   "type": "project",
   "license": "GPL-3.0",
+  "minimum-stability": "dev",
   "description": "",
   "homepage": "https://redandblue.fi/",
   "authors": [
