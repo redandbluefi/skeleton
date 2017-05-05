@@ -15,6 +15,29 @@ Assuming you've done something like this before (that means you've already confi
 - Composer: Installed on machine
 - Yarn: Installed on machine
 
+# Deploying
+
+## Before
+If your project has dependencies that need to run scripts on deploy, add those scripts to composer.json. Prime example would be themes: `cd htdocs/wp-content/themes/theme-skeleton; composer install;`. The theme will run whatever it needs to run when `composer install` is triggered  in the theme. 
+
+## Actually deploying
+Add production as a remote (`git remote add production ssh://site@site.seravo.fi:10000/data/wordpress`) and run `git push production`. Production is configured to trigger `composer install` on post-receive hook.
+
+`composer install` will install the dependencies listed in composer.json using the versions from composer.lock. Your themes are listed as dependencies. To deploy changes to a theme, update the theme repository, and update this project to use the latest and greatest version of your theme with `composer update`. After Composer is ready, add the changed files with `git add composer*`, create a commit with `git commit -m "Update theme"` and finally run `git push production`.
+
+```
+# After you've updated your theme
+composer update
+# Wait for it to complete, then test that the site still works on your local environment
+git add composer*
+git commit -m "Update theme"
+git push production
+# If everything goes well, update origin too
+git push origin
+```
+
+_TODO: Replace with Travis or Circle CI._
+
 # Updating
 This leeches on seravo/wordpress. It's great, but this enables customizations. When Seravo releases updates, *make a backup* and run `./update-core.sh`. That will fetch the latest package (living on the edge) and merge our important files with it before merging the package back .
 
