@@ -2,7 +2,7 @@
   "name": "redandblue/skeleton",
   "type": "project",
   "license": "GPL-3.0",
-  "minimum-stability": "dev",
+  "minimum-stability": "stable",
   "description": "",
   "homepage": "https://redandblue.fi/",
   "authors": [
@@ -94,7 +94,7 @@
   ],
   "require": {
     "php": ">=5.3.2",
-    "johnpbloch/wordpress": ">=4.8",
+    "johnpbloch/wordpress": ">=4.7",
     "composer/installers": "v1.0.12",
     "koodimonni/composer-dropin-installer": ">=0.2.4",
     "vlucas/phpdotenv": "1.0.9",
@@ -124,7 +124,7 @@
     "wpackagist-plugin/duplicate-post": "^3.0",
     "wpackagist-plugin/query-monitor": "^2.13",
     "k1sul1/sensible-content-output": ">=0.2",
-    "redandblue/theme-skeleton": "dev-master"
+    "redandblue/theme-skeleton": "*@dev"
   },
   "extra": {
     "installer-paths": {
