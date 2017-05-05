@@ -20,6 +20,11 @@ Assuming you've done something like this before (that means you've already confi
 ## Before
 If your project has dependencies that need to run scripts on deploy, add those scripts to composer.json. Prime example would be themes: `cd htdocs/wp-content/themes/theme-skeleton; composer install;`. The theme will run whatever it needs to run when `composer install` is triggered  in the theme. 
 
+## During early development
+During early development you can skip some of the steps listed below. If you use `dev-master` in place of `*` or `1.0^`, you don't have to create tags in your dependencies to be able to use them. When a project goes live, it is **not okay** to use nothing but tagged versions. 
+
+When you use `dev-master` as a version, Composer will not checkout from your branch to a tag.
+
 ## Actually deploying
 Add production as a remote (`git remote add production ssh://site@site.seravo.fi:10000/data/wordpress`) and run `git push production`. Production is configured to trigger `composer install` on post-receive hook.
 
@@ -37,7 +42,7 @@ git push production
 # If everything goes well, update origin too
 git push origin
 #
-# Life goes on and you want to keep making more changes
+# Life goes on and you want to keep making more changes (not necessary with dev-master versions)
 cd htdocs/wp-content/themes/theme-skeleton # or whatever
 git checkout master # or whatever
 ```
