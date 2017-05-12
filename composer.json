@@ -44,11 +44,14 @@
   },
   "scripts": {
     "post-install-cmd": [
-      "WordPress\\Installer::symlinkWPContent"
+      "WordPress\\Installer::symlinkWPContent",
+      @buildTheme
     ],
     "post-update-cmd": [
-      "WordPress\\Installer::symlinkWPContent"
-    ]
+      "WordPress\\Installer::symlinkWPContent",
+      @buildTheme
+    ],
+    "buildTheme": "cd htdocs/wp-content/themes/theme-skeleton; yarn; composer install"
   },
   "repositories": [
     {
