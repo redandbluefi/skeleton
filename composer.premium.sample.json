@@ -16,7 +16,7 @@
         "type": "wordpress-plugin",
         "dist": {
           "type": "zip",
-          "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=[INSERT_KEY_HERE]"
+          "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=[INSERT_ACF_KEY_HERE]"
         }
       }
     },
@@ -56,7 +56,7 @@
         "version": "1.7.0",
         "dist": {
           "type": "zip",
-          "url": "https://deliciousbrains.com/dl/wp-migrate-db-pro-latest.zip?licence_key=[INSERT_KEY_HERE]&site_url=development.local"
+          "url": "https://deliciousbrains.com/dl/wp-migrate-db-pro-latest.zip?licence_key=[INSERT_WPDB_KEY_HERE]&site_url=development.local"
         }
       }
     },
@@ -68,7 +68,7 @@
         "version": "1.7.0",
         "dist": {
           "type": "zip",
-          "url": "https://deliciousbrains.com/dl/wp-migrate-db-pro-media-files-latest.zip?licence_key=[INSERT_KEY_HERE]&site_url=development.local"
+          "url": "https://deliciousbrains.com/dl/wp-migrate-db-pro-media-files-latest.zip?licence_key=[INSERT_WPDB_KEY_HERE]&site_url=development.local"
         }
       }
     },
@@ -80,7 +80,7 @@
         "version": "1.7",
         "dist": {
           "type": "zip",
-          "url": "https://deliciousbrains.com/dl/wp-migrate-db-pro-cli-latest.zip?licence_key=[INSERT_KEY_HERE]&site_url=development.local"
+          "url": "https://deliciousbrains.com/dl/wp-migrate-db-pro-cli-latest.zip?licence_key=[INSERT_WPDB_KEY_HERE]&site_url=development.local"
         }
       }
     },
@@ -92,7 +92,7 @@
         "version": "1.7",
         "dist": {
           "type": "zip",
-          "url": "https://deliciousbrains.com/dl/wp-migrate-db-pro-multisite-tools-latest.zip?licence_key=[INSERT_KEY_HERE]&site_url=development.local"
+          "url": "https://deliciousbrains.com/dl/wp-migrate-db-pro-multisite-tools-latest.zip?licence_key=[INSERT_WPDB_KEY_HERE]&site_url=development.local"
         }
       }
     }
