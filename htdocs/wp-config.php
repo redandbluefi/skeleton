@@ -23,11 +23,11 @@ if (file_exists($root_dir . '/.env')) {
   Dotenv::load($root_dir);
 }
 
-if ($_SERVER['HTTP_X_FORWARDED_HOST'] === 'localhost:3000') {
-  define('WP_HOME', 'https://localhost:3000');
-  define('WP_SITEURL', 'https://localhost:3000');
-  // die('dev-server'); // uncomment to test that it works
-}
+// if ($_SERVER['HTTP_X_FORWARDED_HOST'] === 'localhost:3000') {
+// define('WP_HOME', 'https://localhost:3000');
+// define('WP_SITEURL', 'https://localhost:3000');
+// die('dev-server'); // uncomment to test that it works
+// }
 
 
 /**
