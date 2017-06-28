@@ -40,7 +40,7 @@ else
   sudo -u vagrant -i -- wp plugin list --field=name --format=csv | xargs sudo -u vagrant -i -- wp plugin activate --quiet
 
   # Create demopage
-  sudo -u vagrant -i -- wp post creeate --post_type=page --post_title='Element demo' --page_template='element-demo.php' --post_status=publish
+  sudo -u vagrant -i -- wp post create --post_type=page --post_title='Element demo' --page_template='element-demo.php' --post_status=publish
 fi
 
 echo "If this looks like it failed, log into the machine (vagrant ssh) and run the script with '/data/wordpress/vagrant-up-customizer.sh'"
