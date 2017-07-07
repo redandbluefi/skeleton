@@ -1,5 +1,5 @@
 {
-  "name": "redandblue/skeleton",
+  "name": "redandblue/projektinnimi",
   "type": "project",
   "license": "GPL-3.0",
   "minimum-stability": "stable",
@@ -51,7 +51,7 @@
       "WordPress\\Installer::symlinkWPContent",
       "@buildTheme"
     ],
-    "buildTheme": "cd htdocs/wp-content/themes/theme-skeleton; yarn; composer install"
+    "buildTheme": "#cd htdocs/wp-content/themes/theme-skeleton; yarn; composer install"
   },
   "repositories": [
     {
