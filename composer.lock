@@ -154,20 +154,20 @@
         },
         {
             "name": "devgeniem/wp-sanitize-accented-uploads",
-            "version": "1.2",
+            "version": "1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/devgeniem/wp-sanitize-accented-uploads.git",
-                "reference": "b954f19cc669994feb9b8cfe6247ab8820fd162d"
+                "reference": "58c4f7a1adb568a37f98834c3eacb6d2c73b275e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/devgeniem/wp-sanitize-accented-uploads/zipball/b954f19cc669994feb9b8cfe6247ab8820fd162d",
-                "reference": "b954f19cc669994feb9b8cfe6247ab8820fd162d",
+                "url": "https://api.github.com/repos/devgeniem/wp-sanitize-accented-uploads/zipball/58c4f7a1adb568a37f98834c3eacb6d2c73b275e",
+                "reference": "58c4f7a1adb568a37f98834c3eacb6d2c73b275e",
                 "shasum": ""
             },
             "require": {
-                "composer/installers": "v1.0.12",
+                "composer/installers": ">=v1.0.12",
                 "php": ">=5.6"
             },
             "type": "wordpress-muplugin",
@@ -193,7 +193,7 @@
                 "wordpress",
                 "wp"
             ],
-            "time": "2016-04-20T15:10:05+00:00"
+            "time": "2017-01-14T18:15:09+00:00"
         },
         {
             "name": "johnpbloch/wordpress",
@@ -531,10 +531,10 @@
         },
         {
             "name": "koodimonni-plugin-language/woocommerce-fi",
-            "version": "3.0.8",
+            "version": "3.0.9",
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/translation/plugin/woocommerce/3.0.8/fi.zip",
+                "url": "https://downloads.wordpress.org/translation/plugin/woocommerce/3.0.9/fi.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -552,10 +552,10 @@
         },
         {
             "name": "koodimonni-plugin-language/woocommerce-sv_se",
-            "version": "3.0.8",
+            "version": "3.1.0",
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/translation/plugin/woocommerce/3.0.8/sv_SE.zip",
+                "url": "https://downloads.wordpress.org/translation/plugin/woocommerce/3.1.0/sv_SE.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -1209,15 +1209,15 @@
         },
         {
             "name": "wpackagist-plugin/autodescription",
-            "version": "2.9.2",
+            "version": "2.9.3",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/autodescription/",
-                "reference": "tags/2.9.2"
+                "reference": "tags/2.9.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/autodescription.2.9.2.zip",
+                "url": "https://downloads.wordpress.org/plugin/autodescription.2.9.3.zip",
                 "reference": null,
                 "shasum": null
             },
