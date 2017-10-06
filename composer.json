@@ -88,11 +88,11 @@
     },
     {
       "type": "git",
-      "url": "git@github.com:redandbluefi/wordpress-tools.git"
+      "url": "https://github.com/redandbluefi/wordpress-tools.git"
     },
     {
       "type": "git",
-      "url": "git@github.com:redandbluefi/theme-skeleton.git"
+      "url": "https://github.com/redandbluefi/theme-skeleton.git"
     }
   ],
   "require": {

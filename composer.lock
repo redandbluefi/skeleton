@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5ef5980f908a84d61ccaa3181c02de47",
+    "content-hash": "e3a9f78d5b6498f69bab5433fcd7cfc6",
     "packages": [
         {
             "name": "aucor/dynamic-mo-loader",
@@ -986,8 +986,8 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "git@github.com:redandbluefi/theme-skeleton.git",
-                "reference": "6d551a5ad64547c0e7cadd0391ce0f53cdc85db1"
+                "url": "https://github.com/redandbluefi/theme-skeleton.git",
+                "reference": "f22cd492b72035f775a0035988501d12cac51f42"
             },
             "require-dev": {
                 "squizlabs/php_codesniffer": "3.*"
@@ -1007,14 +1007,14 @@
                     "email": "hi@kisu.li"
                 }
             ],
-            "time": "2017-06-09 09:00:26"
+            "time": "2017-10-06T09:13:09+00:00"
         },
         {
             "name": "redandblue/wordpress-tools",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "git@github.com:redandbluefi/wordpress-tools.git",
+                "url": "https://github.com/redandbluefi/wordpress-tools.git",
                 "reference": "8faace4d3acf6b6e99a2894176b66241a9658379"
             },
             "require": {
@@ -1039,7 +1039,7 @@
                 }
             ],
             "description": "Bag of tools to aid in WordPress development.",
-            "time": "2017-06-12 09:48:38"
+            "time": "2017-06-12T09:48:38+00:00"
         },
         {
             "name": "redandbluefi/wp-native-dashboard",
