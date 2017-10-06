@@ -987,7 +987,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/redandbluefi/theme-skeleton.git",
-                "reference": "f22cd492b72035f775a0035988501d12cac51f42"
+                "reference": "81cc499cfaef22ebd1abede3ae2752b74bbae0a4"
             },
             "require-dev": {
                 "squizlabs/php_codesniffer": "3.*"
@@ -1007,7 +1007,7 @@
                     "email": "hi@kisu.li"
                 }
             ],
-            "time": "2017-10-06T09:13:09+00:00"
+            "time": "2017-10-06T11:48:08+00:00"
         },
         {
             "name": "redandblue/wordpress-tools",
