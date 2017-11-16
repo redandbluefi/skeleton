@@ -103,7 +103,7 @@
     "vlucas/phpdotenv": "1.0.9",
     "koodimonni-language/fi": "*",
     "koodimonni-language/sv_SE": "*",
-    "seravo/wp-palvelu-plugin": ">=1.0.1",
+    "seravo/seravo-plugin": "*",
     "redandbluefi/wp-native-dashboard": "*",
     "wpackagist-plugin/user-switching": "^1.0",
     "wpackagist-plugin/polylang": ">=2.1",
