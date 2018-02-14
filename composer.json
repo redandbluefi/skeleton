@@ -87,18 +87,6 @@
       }
     },
     {
-      "type": "package",
-      "package": {
-        "name": "advanced-custom-fields/advanced-custom-fields-pro",
-        "version": "5.6.8",
-        "type": "wordpress-plugin",
-        "dist": {
-          "type": "zip",
-          "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=b3JkZXJfaWQ9NjU3NTd8dHlwZT1kZXZlbG9wZXJ8ZGF0ZT0yMDE1LTEwLTA4IDA2OjQxOjUz"
-        }
-      }
-    },
-    {
       "type": "git",
       "url": "https://github.com/redandbluefi/wordpress-tools.git"
     },
@@ -118,7 +106,6 @@
     "seravo/seravo-plugin": "*",
     "redandbluefi/wp-native-dashboard": "*",
     "wpackagist-plugin/user-switching": "^1.0",
-    "advanced-custom-fields/advanced-custom-fields-pro": "*",
     "wpackagist-plugin/polylang": ">=2.1",
     "aucor/polylang-copy-content": ">=0.1.1",
     "aucor/dynamic-mo-loader": ">=1.1.1",
